@@ -164,4 +164,48 @@ window.exportPDF = async function () {
 };
 
 // Log app start
-console.log('TrailPlan initialized ✈️');
+console.log('Trail Plan initialized ✈️');
+
+// Global loading functions for itinerary generation
+window.showLoading = function () {
+    let overlay = document.getElementById('itinerary-loading-overlay');
+    if (!overlay) {
+        overlay = document.createElement('div');
+        overlay.id = 'itinerary-loading-overlay';
+        overlay.className = 'loading-overlay';
+        overlay.innerHTML = `
+            <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"><\/script>
+            <dotlottie-player 
+              src="/loading.lottie" 
+              background="transparent" 
+              speed="1" 
+              style="width: 300px; height: 300px;" 
+              loop 
+              autoplay>
+            </dotlottie-player>
+        `;
+        document.body.appendChild(overlay);
+    }
+    overlay.style.display = 'flex';
+};
+
+window.hideLoading = function () {
+    const overlay = document.getElementById('itinerary-loading-overlay');
+    if (overlay) {
+        overlay.style.display = 'none';
+    }
+};
+
+// Hide loading screen once page is ready
+window.addEventListener('load', () => {
+    const loadingScreen = document.getElementById('loading-screen');
+    if (loadingScreen) {
+        setTimeout(() => {
+            loadingScreen.classList.add('fade-out');
+            setTimeout(() => {
+                loadingScreen.style.display = 'none';
+            }, 500);
+        }, 500); // Show for at least 500ms
+    }
+});
+
