@@ -974,8 +974,16 @@ export function setupTripForm() {
     const overlay = document.createElement('div');
     overlay.id = 'itinerary-loading-overlay';
     overlay.innerHTML = `
+      <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"><\/script>
       <div class="loading-content">
-        <div class="loading-spinner"></div>
+        <dotlottie-player 
+          src="/loading.lottie" 
+          background="transparent" 
+          speed="1" 
+          style="width: 200px; height: 200px; margin-bottom: 2rem;" 
+          loop 
+          autoplay>
+        </dotlottie-player>
         <div class="loading-messages">
           <p class="loading-message active">${message}</p>
           <p class="loading-message">Analyzing destinations...</p>
@@ -1003,6 +1011,10 @@ export function setupTripForm() {
         z-index: 10000;
       }
       .loading-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         text-align: center;
         color: white;
       }
