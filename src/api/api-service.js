@@ -39,6 +39,9 @@ export async function testBookingConnection() {
  */
 export async function generateItinerary(tripData) {
     try {
+        // Show Lottie loading animation
+        if (window.showLoading) window.showLoading();
+
         console.log('📤 Sending trip data to backend:', tripData);
 
         const response = await fetch(`${API_BASE_URL}/generate-itinerary`, {
@@ -79,6 +82,9 @@ export async function generateItinerary(tripData) {
     } catch (error) {
         console.error('❌ Error generating itinerary:', error);
         throw error;
+    } finally {
+        // Hide loading animation
+        if (window.hideLoading) window.hideLoading();
     }
 }
 
