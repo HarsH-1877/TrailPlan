@@ -1,9 +1,9 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- SEO Meta Tags -->
@@ -16,6 +16,8 @@
   <meta property="og:title" content="TrailPlan - Plan. Optimize. Go." />
   <meta property="og:description" content="Plan your whole trip in minutes — optimize for budget, time or experience" />
   <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://trail-plan.vercel.app/og-image.png" />
+  <meta property="og:url" content="https://trail-plan.vercel.app/" />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,6 +29,14 @@
 </head>
 
 <body>
+  <!-- Loading Screen -->
+  <div id="loading-screen">
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+    <dotlottie-player src="/loading.lottie" background="transparent" speed="1" style="width: 300px; height: 300px;" loop
+      autoplay>
+    </dotlottie-player>
+  </div>
+
   <div id="app"></div>
 
   <!-- PDF Export Libraries (CDN) - Must load before main.js -->
