@@ -71,9 +71,9 @@ async function getCoordinates(locationName) {
                 addressdetails: 1
             },
             headers: {
-                'User-Agent': 'TripPlanner/1.0 (+https://github.com/yourusername/tripplanner; contact@tripplanner.com)'
+                'User-Agent': 'TripPlanner/1.0 (https://trail-plan.vercel.app)'
             },
-            timeout: 5000
+            timeout: 10000 // Increased to 10 seconds
         });
 
         lastRequestTime = Date.now();
@@ -95,8 +95,21 @@ async function getCoordinates(locationName) {
         return result;
 
     } catch (error) {
+        console.error('❌ Geocoding error details:', {
+            message: error.message,
+            code: error.code,
+            response: error.response?.status,
+            location: locationName
+        });
+
         if (error.response) {
             throw new Error(`Geocoding API error: ${error.response.status} - ${error.response.statusText}`);
+        }
+        if (error.code === 'ECONNABORTED') {
+            throw new Error(`Geocoding timeout for: ${locationName}`);
+        }
+        if (error.code === 'ENOTFOUND' || error.code === 'EAI_AGAIN') {
+            throw new Error(`Network error: Cannot reach geocoding service`);
         }
         throw new Error(`Failed to geocode location: ${error.message}`);
     }
