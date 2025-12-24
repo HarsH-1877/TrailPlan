@@ -12,6 +12,7 @@
     "vite": "^7.2.4"
   },
   "dependencies": {
+    "@dotlottie/player-component": "^2.7.12",
     "firebase": "^12.7.0",
     "html2canvas": "^1.4.1",
     "jspdf": "^3.0.4"
