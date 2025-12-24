@@ -2,15 +2,15 @@ import { initializeApp } from 'firebase/app';
 import { getAuth, GoogleAuthProvider } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
 
-// Your web app's Firebase configuration
+// Your web app's Firebase configuration (from environment variables)
 const firebaseConfig = {
-    apiKey: "AIzaSyCQihUXxVwOe_gmJjbIz-KQPJoF5uaja6c",
-    authDomain: "trailplan-23642.firebaseapp.com",
-    projectId: "trailplan-23642",
-    storageBucket: "trailplan-23642.firebasestorage.app",
-    messagingSenderId: "131784198660",
-    appId: "1:131784198660:web:ec81192ec46e34b084c351",
-    measurementId: "G-9LYV3D30EM"
+    apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+    authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+    projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+    storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+    appId: import.meta.env.VITE_FIREBASE_APP_ID,
+    measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
 };
 
 // Initialize Firebase
