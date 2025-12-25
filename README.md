@@ -1,4 +1,4 @@
-![TrailPlan Logo](public/logo.png)
+<img src="public/logo-main.png" alt="TrailPlan Logo" width="30" height="auto">
 # 🌍 TrailPlan - Intelligent Budget-First Travel Planner
 
 > **Plan. Optimize. Go.**
