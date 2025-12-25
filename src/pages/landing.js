@@ -19,7 +19,7 @@ export function LandingPage() {
           Your Journey, Perfectly Planned
         </h1>
         <p class="hero-subtitle animate-on-load">
-          Craft bespoke itineraries, visualize your trip timeline, and track every cost in real-time.
+          Craft bespoke itineraries, visualize your trip timeline, tailored perfectly to your budget.
         </p>
 
         <div class="hero-actions">
@@ -239,7 +239,7 @@ export function LandingPage() {
             <div class="trust-label">User Rating</div>
           </div>
           <div class="trust-item">
-            <div class="trust-number">20%</div>
+            <div class="trust-number">Up to 30%</div>
             <div class="trust-label">Budget Saved</div>
           </div>
         </div>
