@@ -56,19 +56,23 @@ BUDGET RULES (CRITICAL - STRICTLY ENFORCE):
    c. Finally add activities that fit remaining budget
 5. If math doesn't work: REDUCE hotel quality, star rating, or amenities - NOT exceed budget
 
-HOTEL PRICING (STRICT REQUIREMENTS):
-- Research REAL booking.com prices for the destination cities
+HOTEL PRICING (STRICT REQUIREMENTS - NO HALLUCINATION):
+CRITICAL: Prices MUST match REAL booking.com rates - users will click links and see actual prices
+- DO NOT invent discounted or fictional prices that are 2-3x cheaper than reality
+- Research REAL current booking.com prices for the destination cities
+- If you don't know exact price, use CONSERVATIVE estimates (higher, not lower)
 - For ${currency} currency, typical budget hotel: ${currency === 'INR' ? '₹2,000-4,000/night' : '$50-100/night'}
 - For ${currency} currency, typical mid-range: ${currency === 'INR' ? '₹4,000-7,000/night' : '$100-150/night'}
 - ALWAYS choose hotels on the LOWER end of price ranges
 - Verify: (hotel cost per night × nights × rooms needed for ${totalTravelers} pax) fits in budget
 - For groups: may need multiple rooms = multiply hotel cost accordingly
 - Example: Family of 4 in ₹3,000/night hotel = ₹6,000/night total (2 rooms)
+- IMPORTANT: If showing ₹3,000/night, the booking.com link should show ~₹3,000-4,000, NOT ₹8,000
 
 HOTEL SELECTION (CRITICAL):
 - Use MINIMUM hotels needed based on geography
 - Select 3-star or budget hotels, NOT 4-5 star luxury properties
-- Prioritize VALUE over luxury - guest houses, budget chains, affordable options
+- Prioritize VALUE over luxury - guest houses, hostels, budget chains, affordable options
 - For large countries/multi-city trips: MUST use different hotels per city
 - Each hotel should appear in "accommodation" field ONLY on days it's used
 - pricePerNight should reflect TOTAL cost for all travelers (all rooms combined)
