@@ -2,66 +2,59 @@
 
 > **Plan. Optimize. Go.**
 
-TrailPlan is a modern travel planning application that creates personalized itineraries with intelligent budget optimization, real-time cost estimation, and visual timeline representation. Get complete trip plans with optimized flights, hotels, and activities - all tailored to your budget.
+TrailPlan is a modern travel planning application which is all you need to plan your journey. It creates personalized itineraries giving highesh priority to your budget, real-time cost estimation, and visual timeline representation. Get complete trip plans with optimized flights, hotels, and activities - all tailored to your budget.
 
 [![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](https://trailplan.onrender.com)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 ## Features
 
-### 💰 Budget-First Planning
+### Budget-First Planning
 - **Intelligent Budget Analysis**: Determines if your budget is realistic before generating itineraries
-- **Remaining Budget Calculation**: Deducts flight costs automatically and plans hotels/activities within what's left
-- **Smart Cost Optimization**: Finds the best value hotels and activities that fit your budget
+- **Smart Cost Optimization**: Finds the best value hotels, flights and activities in real time that fit your budget
 - **Real-Time Price Validation**: Uses actual booking.com price ranges to prevent unrealistic estimates
-- **Visual Budget Tracking**: Interactive budget meters with over-budget warnings
+- **Visual Budget Tracking**: Visually displays what percene budget can be saved
 
-### ✈️ Complete Trip Planning
+### Complete Trip Planning
 - **Automated Flight Estimation**: Accurate flight cost predictions based on distance and route
 - **Multi-City Routing**: Optimizes travel routes across multiple destinations
 - **Hotel Selection**: Prioritizes budget hotels (3-star, hostels, guesthouses) matching your requirements
 - **Activity Recommendations**: Curated activities, sightseeing, dining, and experiences per destination
 - **Day-by-Day Itinerary**: Comprehensive breakdown of your entire trip
 
-### 📅 Visual Timeline
+### Visual Timeline
 - **Day-by-Day Breakdown**: See your entire trip at a glance
 - **Activity Categorization**: Flights, hotels, activities, meals with color-coded timeline
 - **Booking Integration**: Direct links to Google Flights and Booking.com
 - **PDF Export**: Download your complete itinerary as a professional PDF
 
-### 🔐 User Management
+### User Management
 - **Firebase Authentication**: Secure Google Sign-In
 - **Trip Persistence**: Save and manage multiple trips
 - **Personal Trip Library**: Access your saved itineraries anytime
 
-### 🎨 Modern UI/UX
-- **Glassmorphism Design**: Premium, modern interface
-- **Dark Mode**: Eye-friendly design with elegant color schemes
-- **Responsive Layout**: Seamless experience across all devices
-- **Smooth Animations**: Lottie animations for delightful loading states
-
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Frontend
-- **Vite** - Lightning-fast build tool
 - **Vanilla JavaScript** - No framework bloat
 - **CSS3** - Custom design system with CSS variables
 - **Firebase SDK** - Authentication and Firestore
 - **html2canvas & jsPDF** - PDF generation
-- **Lottie Player** - Animated loading states
+- - **Vite** - Lightning-fast build tool
 
 ### Backend
 - **Node.js + Express** - RESTful API server
 - **Google Gemini** - Intelligent itinerary generation engine
-- **Flight Estimator** - Real-time flight cost estimation
+- **Flight Estimator** - Real-time flight cost estimation 
 - **Geocoding Service** - Location validation and processing
 
 ### Infrastructure
-- **Render** - Cloud deployment (frontend + backend)
+- **Render** - Backend Deployment
+- ""Vercel** Frontend Deployment
 - **Firebase** - Authentication and database
 - **GitHub** - Version control and CI/CD
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 - Node.js 18+ and npm
@@ -169,7 +162,7 @@ TrailPlan/
 └── README.md
 ```
 
-## 🎯 Usage
+## Usage
 
 ### Creating a Trip
 
@@ -245,7 +238,7 @@ Run the development servers and test:
 7. **Trip Management**: Save and retrieve trips
 8. **Navigation**: Test all page transitions
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Please follow these steps:
 
@@ -255,23 +248,17 @@ Contributions are welcome! Please follow these steps:
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 📝 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 👨‍💻 Author
-
-**Harsh**
-- GitHub: [@HarsH-1877](https://github.com/HarsH-1877)
-- Project Link: [https://github.com/HarsH-1877/TrailPlan](https://github.com/HarsH-1877/TrailPlan)
 
 ## 🙏 Acknowledgments
 
-- [Google Gemini](https://deepmind.google/technologies/gemini/) for intelligent trip generation
 - [Firebase](https://firebase.google.com/) for authentication and database
+- [Google Gemini](https://deepmind.google/technologies/gemini/) for intelligent trip generation
 - [Lottie](https://lottiefiles.com/) for beautiful animations
 - [Render](https://render.com/) for seamless deployment
 
 ---
 
-**Made with ❤️ for travelers worldwide**
