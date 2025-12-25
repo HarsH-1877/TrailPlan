@@ -10,7 +10,8 @@ TrailPlan is a modern travel planning application which is all you need to plan 
 
 ### Budget-First Planning
 - **Intelligent Budget Analysis**: Determines if your budget is realistic before generating itineraries
-- **Smart Cost Optimization**: Finds the best value hotels, flights and activities in real time that fit your budget
+- **Smart Cost Optimization**: Finds the best value hotels, flights  in real time that fit your budget
+- **Smart Hotels/Stays Selection**: Selects minimum number of hotels/stays such that you cover maximum locations and minimize your spendings.
 - **Real-Time Price Validation**: Uses actual booking.com price ranges to prevent unrealistic estimates
 - **Visual Budget Tracking**: Visually displays what percene budget can be saved
 
