@@ -91,9 +91,9 @@ export function TimelinePage() {
             <div class="budget-amount">${formatCurrency(totalCost, safeData.currency)}</div>
             <div class="budget-meter-container">
               <div class="budget-meter">
-                <div class="budget-meter-fill" style="width: ${Math.min(budgetPercentage, 100)}%"></div>
+                <div class="budget-meter-fill ${budgetPercentage > 100 ? 'over-budget' : ''}" style="width: ${Math.min(budgetPercentage, 100)}%"></div>
               </div>
-              <div class="budget-percentage">${budgetPercentage}% of budget</div>
+              <div class="budget-percentage ${budgetPercentage > 100 ? 'over-budget-text' : ''}">${budgetPercentage}% of budget${budgetPercentage > 100 ? ' ⚠️' : ''}</div>
             </div>
           </div>
           
@@ -144,7 +144,7 @@ export function TimelinePage() {
               </div>
               <div class="booking-actions">
                 <a href="https://www.google.com/travel/flights" target="_blank" class="btn btn-outline btn-sm">View on Google Flights</a>
-                <button class="btn btn-primary btn-sm" onclick="bookItem('flight', '${itinerary.flight?.id || 'default'}')">Book Now</button>
+                <a href="${itinerary.flight?.bookingUrl || 'https://www.google.com/travel/flights'}" target="_blank" class="btn btn-primary btn-sm">Book Now</a>
               </div>
             </div>
             
@@ -406,10 +406,10 @@ function generateHotelBookingCards(hotels, totalHotelCost, tripData) {
           <div class="booking-subtitle">Location TBD</div>
           <div class="booking-meta">⭐⭐⭐⭐ • ${tripData.duration || 7} nights</div>
         </div>
-        <div class="booking-actions">
-          <a href="https://www.booking.com/hotels" target="_blank" class="btn btn-outline btn-sm">View on Booking.com</a>
-          <button class="btn btn-primary btn-sm" onclick="bookItem('hotel', 'default')">Book Now</button>
-        </div>
+          <div class="booking-actions">
+            <a href="https://www.booking.com/hotels" target="_blank" class="btn btn-outline btn-sm">View on Booking.com</a>
+            <a href="https://www.booking.com/hotels" target="_blank" class="btn btn-primary btn-sm">Book Now</a>
+          </div>
       </div>
     `;
   }
@@ -434,10 +434,10 @@ function generateHotelBookingCards(hotels, totalHotelCost, tripData) {
           </div>
         ` : ''}
       </div>
-      <div class="booking-actions">
-        <a href="${hotel.bookingUrl || 'https://www.booking.com/hotels'}" target="_blank" class="btn btn-outline btn-sm">View on Booking.com</a>
-        <button class="btn btn-primary btn-sm" onclick="bookItem('hotel', 'HT${index + 1}')">Book Now</button>
-      </div>
+        <div class="booking-actions">
+          <a href="https://www.booking.com/hotels" target="_blank" class="btn btn-outline btn-sm">View on Booking.com</a>
+          <a href="${hotel.bookingUrl || 'https://www.booking.com/hotels'}" target="_blank" class="btn btn-primary btn-sm">Book Now</a>
+        </div>
     </div>
   `).join('');
 }
@@ -769,6 +769,16 @@ const timelinePageStyles = `
       font-size: var(--font-size-xs);
       color: var(--color-text-tertiary);
       margin-top: var(--spacing-1);
+    }
+    
+    /* Over-budget warning styles */
+    .budget-meter-fill.over-budget {
+      background: linear-gradient(135deg, #ff4444 0%, #cc0000 100%);
+    }
+    
+    .budget-percentage.over-budget-text {
+      color: #ff4444;
+      font-weight: var(--font-weight-semibold);
     }
     
     .summary-actions {
