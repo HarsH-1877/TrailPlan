@@ -9,8 +9,7 @@ const API_BASE_URL = 'http://localhost:3001/api';
  */
 export async function generateItinerary(tripData) {
     try {
-        // Show Lottie loading animation
-        if (window.showLoading) window.showLoading();
+        // Loading is handled by trip-form.js showLoadingOverlay()
 
         const response = await fetch(`${API_BASE_URL}/generate-itinerary`, {
             method: 'POST',
@@ -32,9 +31,6 @@ export async function generateItinerary(tripData) {
     } catch (error) {
         console.error('API Error:', error);
         throw error;
-    } finally {
-        // Hide loading animation
-        if (window.hideLoading) window.hideLoading();
     }
 }
 

@@ -872,8 +872,8 @@ export function setupTripForm() {
 
     // Show loading overlay
     console.log('🔄 Showing loading overlay...');
-    // showLoadingOverlay('Generating your optimized itinerary...'); // Disabled - api-service.js handles this
-    console.log('✅ Loading overlay shown via api-service.js');
+    showLoadingOverlay('Generating your optimized itinerary...');
+    console.log('✅ Loading overlay shown');
 
     try {
       console.log('🌐 Calling backend API...');
@@ -883,8 +883,8 @@ export function setupTripForm() {
       console.log('✅ Itinerary received:', itinerary);
 
       // Hide loading
-      // hideLoadingOverlay(); // Disabled - api-service.js handles this
-      console.log('✅ Loading hidden via api-service.js');
+      hideLoadingOverlay();
+      console.log('✅ Loading hidden');
 
       // Validate and store itinerary in sessionStorage
       if (itinerary && typeof itinerary === 'object') {
@@ -910,7 +910,7 @@ export function setupTripForm() {
         window.location.hash = '/timeline';
       }
     } catch (error) {
-      // hideLoadingOverlay(); // Disabled - api-service.js handles this in finally block
+      hideLoadingOverlay();
       console.error('❌ Error generating itinerary:', error);
       console.error('❌ Error details:', error.stack);
 
