@@ -1,11 +1,10 @@
+![TrailPlan Logo](public/logo.png)
 # 🌍 TrailPlan - Intelligent Budget-First Travel Planner
 
 > **Plan. Optimize. Go.**
 
 TrailPlan is a modern travel planning application which is all you need to plan your journey. It creates personalized itineraries giving highest priority to your budget by performing real-time cost estimation, and visual timeline representation. Get complete trip plans with optimized flights, hotels, and activities selection - all tailored to your budget.
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](https://trailplan.onrender.com)
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 ## Features
 
