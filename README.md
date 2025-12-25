@@ -7,7 +7,7 @@ TrailPlan is a modern travel planning application that creates personalized itin
 [![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](https://trailplan.onrender.com)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-## ✨ Features
+## Features
 
 ### 💰 Budget-First Planning
 - **Intelligent Budget Analysis**: Determines if your budget is realistic before generating itineraries
@@ -196,7 +196,6 @@ TrailPlan/
 - Prioritizes budget hotels (3-star, hostels, guesthouses)
 - Uses real booking.com pricing
 - Accounts for multiple rooms for groups
-- Deduplicates hotels across days
 
 **Visual Timeline**
 - Day-by-day itinerary with activities
