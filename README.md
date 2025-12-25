@@ -1,25 +1,27 @@
-# 🌍 TrailPlan - AI-Powered Travel Itinerary Planner
+# 🌍 TrailPlan - Intelligent Budget-First Travel Planner
 
 > **Plan. Optimize. Go.**
 
-TrailPlan is a modern, AI-powered travel planning application that creates personalized itineraries with intelligent budget optimization, real-time cost estimation, and visual timeline representation.
+TrailPlan is a modern travel planning application that creates personalized itineraries with intelligent budget optimization, real-time cost estimation, and visual timeline representation. Get complete trip plans with optimized flights, hotels, and activities - all tailored to your budget.
 
 [![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](https://trailplan.onrender.com)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 ## ✨ Features
 
-### 🤖 AI-Powered Itinerary Generation
-- **Gemini AI Integration**: Leverages Google's Gemini 2.5 Flash for intelligent trip planning
-- **Smart Budget Optimization**: AI analyzes your budget and finds the best value hotels and activities
-- **Multi-City Routing**: Optimizes travel routes across multiple destinations
-- **Real-Time Flight Estimation**: Accurate flight cost predictions based on distance and route
-
-### 💰 Budget Intelligence
-- **Feasibility Analysis**: Determines if your budget is realistic before planning
-- **Remaining Budget Calculation**: Deducts flight costs and plans hotels/activities within remaining budget
-- **Conservative Pricing**: Prevents AI hallucination by using real booking.com price ranges
+### 💰 Budget-First Planning
+- **Intelligent Budget Analysis**: Determines if your budget is realistic before generating itineraries
+- **Remaining Budget Calculation**: Deducts flight costs automatically and plans hotels/activities within what's left
+- **Smart Cost Optimization**: Finds the best value hotels and activities that fit your budget
+- **Real-Time Price Validation**: Uses actual booking.com price ranges to prevent unrealistic estimates
 - **Visual Budget Tracking**: Interactive budget meters with over-budget warnings
+
+### ✈️ Complete Trip Planning
+- **Automated Flight Estimation**: Accurate flight cost predictions based on distance and route
+- **Multi-City Routing**: Optimizes travel routes across multiple destinations
+- **Hotel Selection**: Prioritizes budget hotels (3-star, hostels, guesthouses) matching your requirements
+- **Activity Recommendations**: Curated activities, sightseeing, dining, and experiences per destination
+- **Day-by-Day Itinerary**: Comprehensive breakdown of your entire trip
 
 ### 📅 Visual Timeline
 - **Day-by-Day Breakdown**: See your entire trip at a glance
@@ -50,7 +52,7 @@ TrailPlan is a modern, AI-powered travel planning application that creates perso
 
 ### Backend
 - **Node.js + Express** - RESTful API server
-- **Google Gemini API** - AI-powered itinerary generation
+- **Google Gemini** - Intelligent itinerary generation engine
 - **Flight Estimator** - Real-time flight cost estimation
 - **Geocoding Service** - Location validation and processing
 
@@ -179,14 +181,14 @@ TrailPlan/
    - Number of travelers (adults, children, infants)
    - Budget and currency
 4. **Generate**: Click "Generate Itinerary"
-5. **Review**: Explore your AI-generated timeline with booking links
+5. **Review**: Explore your personalized timeline with booking links
 6. **Save**: Save to your trip library for future reference
 7. **Export**: Download as PDF for offline access
 
 ### Key Features in Action
 
 **Budget Feasibility Analysis**
-- AI calculates minimum viable cost
+- System calculates minimum viable cost for your trip
 - Determines if budget is realistic or impossible
 - Only exceeds budget for genuinely impossible scenarios (e.g., ₹30k Mumbai→Switzerland)
 
@@ -266,7 +268,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🙏 Acknowledgments
 
-- [Google Gemini](https://deepmind.google/technologies/gemini/) for AI capabilities
+- [Google Gemini](https://deepmind.google/technologies/gemini/) for intelligent trip generation
 - [Firebase](https://firebase.google.com/) for authentication and database
 - [Lottie](https://lottiefiles.com/) for beautiful animations
 - [Render](https://render.com/) for seamless deployment
