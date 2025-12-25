@@ -186,13 +186,13 @@ TrailPlan/
 
 **Smart Hotel Selection**
 - Prioritizes budget hotels (3-star, hostels, guesthouses)
+- Selects hotels/stays optimally such that you cover maximum locations and minimize spendings.
 - Uses real booking.com pricing
 - Accounts for multiple rooms for groups
 
 **Visual Timeline**
 - Day-by-day itinerary with activities
 - Color-coded event types
-- Budget breakdown per day
 - Direct booking links
 
 ## 🔧 Configuration
