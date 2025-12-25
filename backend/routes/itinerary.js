@@ -75,9 +75,26 @@ router.post('/generate-itinerary', async (req, res) => {
         console.log(`✅ Flight estimate: ${currency} ${flightCostInCurrency.toLocaleString()}`);
         console.log(`   Distance: ${flightEstimate.distance.toLocaleString()} km`);
 
+        // CRITICAL: Calculate remaining budget after flights
+        const totalBudget = parseFloat(budget) || 0;
+        const remainingBudgetForHotelsAndActivities = Math.max(0, totalBudget - flightCostInCurrency);
+
+        console.log(`💰 Budget breakdown:`);
+        console.log(`   Total budget: ${currency} ${totalBudget.toLocaleString()}`);
+        console.log(`   Flight cost: ${currency} ${flightCostInCurrency.toLocaleString()}`);
+        console.log(`   Remaining for hotels/activities: ${currency} ${remainingBudgetForHotelsAndActivities.toLocaleString()}`);
+
+        // Create modified tripData with remaining budget for Gemini
+        const tripDataForGemini = {
+            ...tripData,
+            budget: remainingBudgetForHotelsAndActivities, // Use remaining budget, not total
+            originalBudget: totalBudget, // Keep original for reference
+            flightCost: flightCostInCurrency
+        };
+
         // Step 2: Build Gemini prompt
         console.log('🤖 Building Gemini prompt...');
-        const prompt = buildOptimizedItineraryPrompt(tripData, flightEstimate);
+        const prompt = buildOptimizedItineraryPrompt(tripDataForGemini, flightEstimate);
 
         // Step 3: Call Gemini API in JSON mode (no strict schema, use robust parser instead)
         console.log('📤 Sending to Gemini AI (JSON mode)...');
