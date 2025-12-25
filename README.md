@@ -7,7 +7,7 @@ TrailPlan is a modern, AI-powered travel planning application that creates perso
 [![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](https://trailplan.onrender.com)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-## ✨ Features
+## Features
 
 ### 🤖 AI-Powered Itinerary Generation
 - **Gemini AI Integration**: Leverages Google's Gemini 2.5 Flash for intelligent trip planning
@@ -194,7 +194,6 @@ TrailPlan/
 - Prioritizes budget hotels (3-star, hostels, guesthouses)
 - Uses real booking.com pricing
 - Accounts for multiple rooms for groups
-- Deduplicates hotels across days
 
 **Visual Timeline**
 - Day-by-day itinerary with activities
