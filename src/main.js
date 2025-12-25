@@ -44,16 +44,11 @@ router.setAfterRender((path) => {
         const currentUser = getCurrentUser();
         updateNavbar(currentUser);
 
-        // Use a guard to prevent multiple setups
-        if (!window.tripFormSetupDone) {
-            setTimeout(() => {
-                console.log('Calling setupTripForm() now...');
-                setupTripForm();
-                window.tripFormSetupDone = true;
-            }, 100);
-        } else {
-            console.log('Trip form already set up, skipping...');
-        }
+        // Always setup trip form when navigating to this page
+        setTimeout(() => {
+            console.log('Calling setupTripForm() now...');
+            setupTripForm();
+        }, 100);
     }
 
     // My Trips page
