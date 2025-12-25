@@ -957,12 +957,16 @@ export function setupLandingPage() {
     }
   };
 
-  // Hero background rotation
+  // Hero background rotation - Clear any existing interval first!
+  if (window.heroBackgroundInterval) {
+    clearInterval(window.heroBackgroundInterval);
+  }
+
   const heroBackgrounds = document.querySelectorAll('.hero-bg');
   if (heroBackgrounds.length > 0) {
     let currentBgIndex = 0;
 
-    setInterval(() => {
+    window.heroBackgroundInterval = setInterval(() => {
       // Remove active class from current
       heroBackgrounds[currentBgIndex].classList.remove('active');
 
