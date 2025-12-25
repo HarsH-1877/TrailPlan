@@ -174,7 +174,10 @@ router.post('/generate-itinerary', async (req, res) => {
         if (itinerary.dailyItinerary && Array.isArray(itinerary.dailyItinerary)) {
             itinerary.dailyItinerary.forEach((day, index) => {
                 if (day.accommodation && day.accommodation.name && day.accommodation.name !== 'N/A') {
-                    const hotelKey = `${day.accommodation.name}-${day.location}`;
+                    // Normalize key: trim, lowercase, remove extra spaces to prevent duplicates
+                    const normalizedName = (day.accommodation.name || '').trim().toLowerCase().replace(/\s+/g, ' ');
+                    const normalizedLocation = (day.location || '').trim().toLowerCase().replace(/\s+/g, ' ');
+                    const hotelKey = `${normalizedName}-${normalizedLocation}`;
 
                     if (!hotelOccurrences.has(hotelKey)) {
                         hotelOccurrences.set(hotelKey, {

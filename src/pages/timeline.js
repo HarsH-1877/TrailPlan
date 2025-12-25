@@ -244,7 +244,11 @@ function processApiItinerary(apiData) {
     apiData.dailyItinerary.forEach((day, index) => {
       // Extract hotel for this day
       if (day.accommodation && day.accommodation.name && day.accommodation.name !== 'N/A') {
-        const hotelKey = `${day.accommodation.name}-${day.location}`;
+        // Normalize key: trim, lowercase, remove extra spaces to prevent duplicates
+        const normalizedName = (day.accommodation.name || '').trim().toLowerCase().replace(/\s+/g, ' ');
+        const normalizedLocation = (day.location || '').trim().toLowerCase().replace(/\s+/g, ' ');
+        const hotelKey = `${normalizedName}-${normalizedLocation}`;
+
         if (!hotelsMap.has(hotelKey)) {
           hotelsMap.set(hotelKey, {
             id: `HT${hotelsMap.size + 1}`,
