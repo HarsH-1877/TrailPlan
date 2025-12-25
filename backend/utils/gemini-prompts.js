@@ -74,11 +74,11 @@ HOTEL SELECTION (CRITICAL):
 - Select 3-star or budget hotels, NOT 4-5 star luxury properties
 - Prioritize VALUE over luxury - guest houses, hostels, budget chains, affordable options
 - For large countries/multi-city trips: MUST use different hotels per city
-- Each hotel should appear in "accommodation" field ONLY on days it's used
+- CRITICAL: If staying at a hotel for multiple days, include the SAME accommodation object in EVERY day
+- Example: 7-day trip, same hotel all 7 days → accommodation object in days 1, 2, 3, 4, 5, 6, 7
+- Example: 3 days Hotel A (Mumbai), 4 days Hotel B (Goa) → Hotel A in days 1-3, Hotel B in days 4-7
 - pricePerNight should reflect TOTAL cost for all travelers (all rooms combined)
-- First day of hotel: include full details with check-in
-- Subsequent days at same hotel: repeat accommodation object
-- Last day of hotel: include full details with check-out implication
+- DO NOT omit accommodation from middle days - include it every single day of the stay
 
 OTHER RULES:
 - Visit 2-3 cities max (optimize route)
@@ -129,15 +129,19 @@ JSON (BE CONCISE):
 }
 
 VERIFICATION CHECKLIST (DO THIS BEFORE RETURNING JSON):
-1. Budget Feasibility Re-check:
+1. Accommodation Check:
+   - Count days in dailyItinerary: Should be ${duration} days
+   - Count how many days have "accommodation" field: Should match number of nights
+   - Example: 7-day trip = accommodation in days 1-7 (even if same hotel)
+2. Budget Feasibility Re-check:
    - Did I calculate minimum viable cost vs user budget?
    - If I exceeded budget: Was it genuinely impossible or did I just choose expensive options?
    - For practical budgets: Did I aggressively find cheapest viable options?
-2. Calculate total cost: Add ALL accommodation + activities + meals
-3. Compare: Is total ≤ ${currency} ${budget}? If NO and budget was PRACTICAL, reduce hotel quality or remove activities
-4. Double-check hotel prices: Are they realistic for ${currency} in these cities? Are they budget-friendly?
-5. Room calculation: Did you account for ${totalTravelers} travelers (may need multiple rooms)?
-6. Final check: For PRACTICAL budgets, estimatedSpend MUST be ≤ ${budget}. For IMPOSSIBLE budgets, note deficit in remainingBudget as negative.
+3. Calculate total cost: Add ALL accommodation + activities + meals
+4. Compare: Is total ≤ ${currency} ${budget}? If NO and budget was PRACTICAL, reduce hotel quality or remove activities
+5. Double-check hotel prices: Are they realistic for ${currency} in these cities? Are they budget-friendly?
+6. Room calculation: Did you account for ${totalTravelers} travelers (may need multiple rooms)?
+7. Final check: For PRACTICAL budgets, estimatedSpend MUST be ≤ ${budget}. For IMPOSSIBLE budgets, note deficit in remainingBudget as negative.
 
 CRITICAL: Keep activity titles SHORT. Real prices in ${currency}. NO flight costs in itinerary. MUST use different hotels when traveling between distant cities. BUDGET COMPLIANCE IS ABSOLUTELY MANDATORY for practical budgets. Only exceed for GENUINELY IMPOSSIBLE scenarios (e.g., ₹30k Mumbai→Switzerland). For all normal trips, target 75-85% of ${currency} ${budget} by finding CHEAPER HOTELS and reducing activities. NEVER exceed budget just because you selected expensive options.`;
 }
