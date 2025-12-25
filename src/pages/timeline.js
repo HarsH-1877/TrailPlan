@@ -244,12 +244,13 @@ function processApiItinerary(apiData) {
     apiData.dailyItinerary.forEach((day, index) => {
       // Extract hotel for this day
       if (day.accommodation && day.accommodation.name && day.accommodation.name !== 'N/A') {
-        // Normalize key: trim, lowercase, remove extra spaces to prevent duplicates
-        const normalizedName = (day.accommodation.name || '').trim().toLowerCase().replace(/\s+/g, ' ');
-        const normalizedLocation = (day.location || '').trim().toLowerCase().replace(/\s+/g, ' ');
-        const hotelKey = `${normalizedName}-${normalizedLocation}`;
+        // Use ONLY hotel name as key - location variations cause duplicates
+        const hotelKey = (day.accommodation.name || '').trim().toLowerCase().replace(/\s+/g, ' ');
+
+        console.log(`Day ${index + 1}: Hotel="${day.accommodation.name}", Location="${day.location}", Key="${hotelKey}"`);
 
         if (!hotelsMap.has(hotelKey)) {
+          console.log(`✅ Adding new hotel: ${day.accommodation.name}`);
           hotelsMap.set(hotelKey, {
             id: `HT${hotelsMap.size + 1}`,
             name: day.accommodation.name,
@@ -264,6 +265,8 @@ function processApiItinerary(apiData) {
             totalPrice: (day.accommodation.pricePerNight || 0) * (day.accommodation.totalNights || 1),
             bookingUrl: day.accommodation.bookingUrl || 'https://www.booking.com/hotels'
           });
+        } else {
+          console.log(`⏭️  Skipping duplicate: ${day.accommodation.name}`);
         }
       }
 
