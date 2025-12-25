@@ -1,4 +1,4 @@
-<img src="public/logo-main.png" alt="TrailPlan Logo" width="200" height="auto">
+<img src="public/logo-main.png" alt="TrailPlan Logo" width="200" height="auto" align=centre>
 # 🌍 TrailPlan - Intelligent Budget-First Travel Planner
 
 > **Plan. Optimize. Go.**
