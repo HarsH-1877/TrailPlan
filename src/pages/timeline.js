@@ -204,7 +204,7 @@ export function TimelinePage() {
                 </div>
                 <div class="breakdown-separator"></div>
                 <div class="breakdown-item breakdown-total">
-                  <span>Total Estimated</span>
+                  <span>Total Estimated (per person)</span>
                   <span class="breakdown-price">${formatCurrency(totalCost, safeData.currency)}</span>
                 </div>
               </div>
