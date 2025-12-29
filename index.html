@@ -110,6 +110,34 @@
   }
   </script>
 
+  <!-- WebSite Schema to Control Site Name in Search Results -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "TrailPlan",
+    "alternateName": "TrailPlan - Budget-First Trip Planner",
+    "url": "https://trail-plan.vercel.app",
+    "description": "Budget-first personalized trip planner that helps travelers create customized itineraries and save up to 30% on travel costs.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "TrailPlan",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://trail-plan.vercel.app/logo.png"
+      }
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://trail-plan.vercel.app/?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
