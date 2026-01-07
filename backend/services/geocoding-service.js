@@ -85,7 +85,73 @@ const STATIC_COORDINATES = {
     'Mumbai, India': { lat: 19.0760, lon: 72.8777, displayName: 'Mumbai, India' },
     'Delhi, India': { lat: 28.7041, lon: 77.1025, displayName: 'Delhi, India' },
     'Sydney, Australia': { lat: -33.8688, lon: 151.2093, displayName: 'Sydney, Australia' },
-    'Bangkok, Thailand': { lat: 13.7563, lon: 100.5018, displayName: 'Bangkok, Thailand' }
+    'Bangkok, Thailand': { lat: 13.7563, lon: 100.5018, displayName: 'Bangkok, Thailand' },
+
+    // Indian Cities (Airport Cities) - Comprehensive Fallback
+    // WEST
+    'Pune': { lat: 18.5204, lon: 73.8567, displayName: 'Pune, Maharashtra, India' },
+    'Pune, India': { lat: 18.5204, lon: 73.8567, displayName: 'Pune, Maharashtra, India' },
+    'Mumbai': { lat: 19.0760, lon: 72.8777, displayName: 'Mumbai, Maharashtra, India' },
+    'Mumbai, India': { lat: 19.0760, lon: 72.8777, displayName: 'Mumbai, Maharashtra, India' },
+    'Nagpur': { lat: 21.1458, lon: 79.0882, displayName: 'Nagpur, Maharashtra, India' },
+    'Ahmedabad': { lat: 23.0225, lon: 72.5714, displayName: 'Ahmedabad, Gujarat, India' },
+    'Surat': { lat: 21.1702, lon: 72.8311, displayName: 'Surat, Gujarat, India' },
+    'Vadodara': { lat: 22.3072, lon: 73.1812, displayName: 'Vadodara, Gujarat, India' },
+    'Goa': { lat: 15.2993, lon: 74.1240, displayName: 'Goa, India' },
+    'Indore': { lat: 22.7196, lon: 75.8577, displayName: 'Indore, Madhya Pradesh, India' },
+    'Bhopal': { lat: 23.2599, lon: 77.4126, displayName: 'Bhopal, Madhya Pradesh, India' },
+    'Aurangabad': { lat: 19.8762, lon: 75.3433, displayName: 'Aurangabad, Maharashtra, India' },
+
+    // NORTH
+    'Delhi': { lat: 28.7041, lon: 77.1025, displayName: 'Delhi, India' },
+    'New Delhi': { lat: 28.6139, lon: 77.2090, displayName: 'New Delhi, India' },
+    'Jaipur': { lat: 26.9124, lon: 75.7873, displayName: 'Jaipur, Rajasthan, India' },
+    'Udaipur': { lat: 24.5854, lon: 73.7125, displayName: 'Udaipur, Rajasthan, India' },
+    'Jodhpur': { lat: 26.2389, lon: 73.0243, displayName: 'Jodhpur, Rajasthan, India' },
+    'Lucknow': { lat: 26.8467, lon: 80.9462, displayName: 'Lucknow, Uttar Pradesh, India' },
+    'Varanasi': { lat: 25.3176, lon: 82.9739, displayName: 'Varanasi, Uttar Pradesh, India' },
+    'Amritsar': { lat: 31.6340, lon: 74.8723, displayName: 'Amritsar, Punjab, India' },
+    'Chandigarh': { lat: 30.7333, lon: 76.7794, displayName: 'Chandigarh, India' },
+    'Srinagar': { lat: 34.0837, lon: 74.7973, displayName: 'Srinagar, Jammu and Kashmir, India' },
+    'Leh': { lat: 34.1526, lon: 77.5770, displayName: 'Leh, Ladakh, India' },
+    'Dehradun': { lat: 30.3165, lon: 78.0322, displayName: 'Dehradun, Uttarakhand, India' },
+
+    // SOUTH
+    'Bangalore': { lat: 12.9716, lon: 77.5946, displayName: 'Bengaluru, Karnataka, India' },
+    'Bengaluru': { lat: 12.9716, lon: 77.5946, displayName: 'Bengaluru, Karnataka, India' },
+    'Hyderabad': { lat: 17.3850, lon: 78.4867, displayName: 'Hyderabad, Telangana, India' },
+    'Chennai': { lat: 13.0827, lon: 80.2707, displayName: 'Chennai, Tamil Nadu, India' },
+    'Kochi': { lat: 9.9312, lon: 76.2673, displayName: 'Kochi, Kerala, India' },
+    'Cochin': { lat: 9.9312, lon: 76.2673, displayName: 'Kochi, Kerala, India' },
+    'Thiruvananthapuram': { lat: 8.5241, lon: 76.9366, displayName: 'Thiruvananthapuram, Kerala, India' },
+    'Trivandrum': { lat: 8.5241, lon: 76.9366, displayName: 'Thiruvananthapuram, Kerala, India' },
+    'Kozhikode': { lat: 11.2588, lon: 75.7804, displayName: 'Kozhikode, Kerala, India' },
+    'Calicut': { lat: 11.2588, lon: 75.7804, displayName: 'Kozhikode, Kerala, India' },
+    'Coimbatore': { lat: 11.0168, lon: 76.9558, displayName: 'Coimbatore, Tamil Nadu, India' },
+    'Madurai': { lat: 9.9252, lon: 78.1198, displayName: 'Madurai, Tamil Nadu, India' },
+    'Tiruchirappalli': { lat: 10.7905, lon: 78.7047, displayName: 'Tiruchirappalli, Tamil Nadu, India' },
+    'Trichy': { lat: 10.7905, lon: 78.7047, displayName: 'Tiruchirappalli, Tamil Nadu, India' },
+    'Mangalore': { lat: 12.9141, lon: 74.8560, displayName: 'Mangalore, Karnataka, India' },
+    'Visakhapatnam': { lat: 17.6868, lon: 83.2185, displayName: 'Visakhapatnam, Andhra Pradesh, India' },
+    'Vijayawada': { lat: 16.5062, lon: 80.6480, displayName: 'Vijayawada, Andhra Pradesh, India' },
+
+    // EAST & NORTH-EAST
+    'Kolkata': { lat: 22.5726, lon: 88.3639, displayName: 'Kolkata, West Bengal, India' },
+    'Bhubaneswar': { lat: 20.2961, lon: 85.8245, displayName: 'Bhubaneswar, Odisha, India' },
+    'Patna': { lat: 25.5941, lon: 85.1376, displayName: 'Patna, Bihar, India' },
+    'Ranchi': { lat: 23.3441, lon: 85.3096, displayName: 'Ranchi, Jharkhand, India' },
+    'Guwahati': { lat: 26.1158, lon: 91.7086, displayName: 'Guwahati, Assam, India' },
+    'Bagdogra': { lat: 26.7088, lon: 88.3204, displayName: 'Bagdogra, West Bengal, India' },
+    'Siliguri': { lat: 26.7088, lon: 88.3204, displayName: 'Siliguri, West Bengal, India' },
+    'Port Blair': { lat: 11.6234, lon: 92.7265, displayName: 'Port Blair, Andaman and Nicobar Islands, India' },
+
+    // Global Hubs (Common Origins/Destinations)
+    'Singapore': { lat: 1.3521, lon: 103.8198, displayName: 'Singapore' },
+    'Dubai': { lat: 25.2048, lon: 55.2708, displayName: 'Dubai, UAE' },
+    'New York': { lat: 40.7128, lon: -74.0060, displayName: 'New York, USA' },
+    'London': { lat: 51.5074, lon: -0.1278, displayName: 'London, UK' },
+    'Paris': { lat: 48.8566, lon: 2.3522, displayName: 'Paris, France' },
+    'Bali': { lat: -8.4095, lon: 115.1889, displayName: 'Bali, Indonesia' }
 };
 
 /**
