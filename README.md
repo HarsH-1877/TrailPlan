@@ -225,7 +225,7 @@ TrailPlan/
 - Start Command: `cd backend && node server.js`
 - Environment Variables: Add `GEMINI_API_KEY`, `FRONTEND_URL`
 
-## 🧪 Testing
+## Testing
 
 Run the development servers and test:
 
@@ -253,7 +253,7 @@ Contributions are welcome! Please follow these steps:
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - [Firebase](https://firebase.google.com/) for authentication and database
 - [Google Gemini](https://deepmind.google/technologies/gemini/) for intelligent trip generation
